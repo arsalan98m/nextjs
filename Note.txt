@@ -1,0 +1,39 @@
+// **** Data Fetching **** //
+
+1. Data fetching  is the Major Building block of nextJS
+2. Nextjs helps with building "fullstack React apps"
+
+3. By default NextJs pre-renders all pages (server-side rendering:SSR)
+
+
+// **** Traditional React APPS **** //
+
+In standard React we get an empty HTML file and all the js code and then that  javascript code runs and bring something on the screen and that happens super fast so users wont't really see a problem there
+The actual HTML Code served by the server
+ 
+
+// **** NEXTJS **** //
+What nextjs does for us instead of loading data only after the page was send back to the clien, NextJS pre-renders a page and pre-renders all the HTML content with all the data that might be needed it loads that in advanced and then pre-generates the finished HTML page which can be send back to the client
+
+NextJS will not just send back this pre-rendered page, but it will also send back all the javascript code that belongs to it and it will do something which is called hydrating that page.
+
+But we did send back that pre-rendered page initially
+
+
+// **** Web crawler **** //
+
+Automatic system is web browser that is able to match search keywords 
+A crawler is a computer program that automatically searches documents on the Web
+
+
+
+// **** Two Forms of Pre-rendering **** //
+
+1. Static-Site-Generation
+With Static-Site-Generation all the pages are generated in advance during build time 
+So, data and pages are prepared during build time when you build your appliaction before you deploy it.
+
+ 
+2. Server-Side-Rendering
+Pages are generated during run-time
+

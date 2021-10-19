@@ -1,8 +1,10 @@
 function HomePage() {
   return (
-    <div>
-      <h1>Data fetching</h1>
-    </div>
+    <ul>
+      <li>Product 1</li>
+      <li>Product 2</li>
+      <li>Product 3</li>
+    </ul>
   );
 }
 
