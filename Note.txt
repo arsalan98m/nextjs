@@ -1,5 +1,12 @@
 // ********** ISR(Incremental Static Regeneration) *************** //
 
+Q: What if you have data that changes fruquently?
+// IF WE ADD 4th product after page was deployed then we have to rebuild and redeploy the page all the time and that doesn't sound like a great thing to do.
+
+// NextJS also has solution for this
+
+1st Solution is you use tradtional react useEffect hook this is ok but there is another way to do this and this is ISR (Incremental Static Generation)
+
 1. ISR(Incremental Static Generation) it means you are not generate statically page at build time but that it's continously updated even after deployment without you re-deploying it
 
 2. In ISR NextJS generates new pages & re-generates current pages on the fly when data is updated

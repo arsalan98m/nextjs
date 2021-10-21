@@ -20,7 +20,7 @@ function HomePage(props) {
 
 // so you pre-generate a page, but then you can also tell NextJs that a given page should be re-generated again for every incoming request at most every X seconds.
 
-// we can use revalidate property
+// we can use revalidate property with timer value where we define the time
 
 export async function getStaticProps() {
   console.log('RE-(GENERATING)');
