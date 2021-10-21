@@ -1,18 +1,3 @@
-// ********** Static-Site-Generation *************** //
-With Static-Site-Generation all the pages are generated in advance during build time 
-So, data and pages are prepared during build time when you build your appliaction before you deploy it.
-
-for static site generation and server side rendering  we used Next.js functions
- 
-1. If no pre-rendering function is used in your component next js by default run getStaticProps
-
-
-
-2. In getStaticProps function You will always return an object that has  props key and this function prepares the props for the component 
-
-
-3. If you have getStaticProps function in your file it will first execute this function and then run the component and then therefore in this function the code will never be visible on the clien side that fetches data
-
 // ********** ISR(Incremental Static Regeneration) *************** //
 
 1. ISR(Incremental Static Generation) it means you are not generate statically page at build time but that it's continously updated even after deployment without you re-deploying it
