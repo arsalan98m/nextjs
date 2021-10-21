@@ -1,39 +1,30 @@
-// **** Data Fetching **** //
-
-1. Data fetching  is the Major Building block of nextJS
-2. Nextjs helps with building "fullstack React apps"
-
-3. By default NextJs pre-renders all pages (server-side rendering:SSR)
-
-
-// **** Traditional React APPS **** //
-
-In standard React we get an empty HTML file and all the js code and then that  javascript code runs and bring something on the screen and that happens super fast so users wont't really see a problem there
-The actual HTML Code served by the server
- 
-
-// **** NEXTJS **** //
-What nextjs does for us instead of loading data only after the page was send back to the clien, NextJS pre-renders a page and pre-renders all the HTML content with all the data that might be needed it loads that in advanced and then pre-generates the finished HTML page which can be send back to the client
-
-NextJS will not just send back this pre-rendered page, but it will also send back all the javascript code that belongs to it and it will do something which is called hydrating that page.
-
-But we did send back that pre-rendered page initially
-
-
-// **** Web crawler **** //
-
-Automatic system is web browser that is able to match search keywords 
-A crawler is a computer program that automatically searches documents on the Web
-
-
-
-// **** Two Forms of Pre-rendering **** //
-
-1. Static-Site-Generation
+// ********** Static-Site-Generation *************** //
 With Static-Site-Generation all the pages are generated in advance during build time 
 So, data and pages are prepared during build time when you build your appliaction before you deploy it.
 
+for static site generation and server side rendering  we used Next.js functions
  
-2. Server-Side-Rendering
-Pages are generated during run-time
+1. If no pre-rendering function is used in your component next js by default run getStaticProps
 
+
+
+2. In getStaticProps function You will always return an object that has  props key and this function prepares the props for the component 
+
+
+3. If you have getStaticProps function in your file it will first execute this function and then run the component and then therefore in this function the code will never be visible on the clien side that fetches data
+
+// ********** ISR(Incremental Static Regeneration) *************** //
+
+1. ISR(Incremental Static Generation) it means you are not generate statically page at build time but that it's continously updated even after deployment without you re-deploying it
+
+2. In ISR NextJS generates new pages & re-generates current pages on the fly when data is updated
+
+Example: 
+1. There is no change on first visit after the content is changed.
+2. The page visit triggers NextJS to re-fetch the page data in bg 
+3. The Static Page is regenerated ready for the next visit
+
+Anoter Example in my words:
+Misaal ky tor par mainy apni app main api attach kari jismy 3 products arahay hai or mainy build bana kar app deploy kar diya 
+ab user jab bhi visit karega tu ussy yeh 3 products show hongi ab agar main 4th product add karta hoon tu static generation main kya hoga ky mujhy dobara sy apny pc main build bana kar deploy karna hoga tu ja kar 4th product show hogi lekin agar hum ISR use kary hain tu usmy hum time bataty hain k jab user page trigger karega tu kitny time main dobara regeneration karni hai 
+Ismy hota aisa hai k wohi 3 products wali example ab ismy many 4th product add kari ab jab user page trigger karega tu mainy 10 sec lagay hain k jasiy user trigger karega usky 10s main dobara build bana na ab 10 sec baad build ban gayi isky baad user dobara trigger karega tu isky pass updated data show hoga or baqi users ka pass bhi updated data show hoga yeh flow chalta hai isr main
