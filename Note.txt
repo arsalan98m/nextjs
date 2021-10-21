@@ -13,7 +13,7 @@ The actual HTML Code served by the server
  
 
 // **** NEXTJS **** //
-What nextjs does for us instead of loading data only after the page was send back to the clien, NextJS pre-renders a page and pre-renders all the HTML content with all the data that might be needed it loads that in advanced and then pre-generates the finished HTML page which can be send back to the client
+What nextjs does for us instead of loading data only after the page was send back to the client, NextJS pre-renders a page and pre-renders all the HTML content with all the data that might be needed it loads that in advanced and then pre-generates the finished HTML page which can be send back to the client
 
 NextJS will not just send back this pre-rendered page, but it will also send back all the javascript code that belongs to it and it will do something which is called hydrating that page.
 
@@ -40,14 +40,14 @@ Pages are generated during run-time
 // ********** Static-Site-Generation (getStaticProps) *************** //
 With Static-Site-Generation all the pages are generated in advance during build time 
 So, data and pages are prepared during build time when you build your appliaction before you deploy it.
+Everytime you chage something in your code then you rebuild it on your machine and re-deploy it again.
 
 for static site generation and server side rendering  we used Next.js functions
  
 1. If no pre-rendering function is used in your component next js by default run getStaticProps
 
 
-
 2. In getStaticProps function You will always return an object that has  props key and this function prepares the props for the component 
 
 
-3. If you have getStaticProps function in your file it will first execute this function and then run the component and then therefore in this function the code will never be visible on the clien side that fetches data
+3. If you have getStaticProps function in your file it will first execute this function and then run the component and then therefore in this function the code will never be visible on the client side that fetches data this only server side code this function and the logic behind function will not visible on client side
