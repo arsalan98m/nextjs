@@ -43,6 +43,7 @@ export async function getStaticProps(context) {
 }
 
 // goal of getStaticPath is to tell NextJS which instances of this dynamic page should be generated
+// getStaticPath hum jab use karengy jab hum dynamic values get karengy gy params ky through or woh hum is function ky thorugh getStaticProps ko pass karengy or wahan sy apna data find kar k user ki screen par show karadengy
 
 // The fallback key can help you if you have a lot of pages that would need to-be pre-generated
 
