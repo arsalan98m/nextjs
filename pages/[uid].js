@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Home() {
+function SingleUserPage(props) {
   return (
     <div>
-      <h1>Home page</h1>
+      <h1>{props.id}</h1>
     </div>
   );
 }
@@ -11,11 +11,15 @@ function Home() {
 // Note - if we have a dynamic page for a single user or differnet users if we use getServerSideProps we don't need and we can't user getStaticPaths
 
 export async function getServerSideProps(context) {
-  const {} = context;
+  const { params } = context;
+
+  const userId = params.uid;
 
   return {
-    props: {},
+    props: {
+      id: `user-id ${userId}`,
+    },
   };
 }
 
-export default Home;
+export default SingleUserPage;

@@ -1,1 +1,8 @@
- 
+ // ===   Server Side Rendering === //
+
+ // In Server Side Rendering - pre-render a page for every incoming request 
+ // NextJS gives a function which we can add to our page or compnent files which is then really executed whenever a request reaches to the server which is re-executed every incoming request comes
+
+
+ // Note - if we have a dynamic page for a single user or differnet users if we use getServerSideProps we don't need and we can't user getStaticPaths
+
