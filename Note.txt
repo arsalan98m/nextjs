@@ -25,7 +25,9 @@ But we did send back that pre-rendered page initially
 Automatic system is web browser that is able to match search keywords 
 A crawler is a computer program that automatically searches documents on the Web
 
-
+// **** Pre-rendering ****//
+Pre-rendering refers to the process of generating HTML in advance with the necessary data for a page in our application.
+Pre-rendering can results in better performance and SEO
 
 // **** Two Forms of Pre-rendering **** //
 
