@@ -16,7 +16,9 @@ function ProductDetailPage(props) {
   );
 }
 
-// Dynamic id ky uppar agar hum getStaticProps use karty hain tu yeh hamain pre-generated page nahi bana kar dega reason kun k yeh keh raha hai k mujhe nahi pata tumhari ids kitni hai
+// What has happend in our case we have asked NextJS to pre-render this ProductDetailPage but we haven't informed what are the possible values of ProductDetail Page and the way we informed that is using  getStaticPaths function
+
+// Dynamic id ky uppar agar hum getStaticProps use karty hain tu yeh hamain pre-generated page nahi bana kar dega reason kun k yeh keh raha hai k mujhe nahi pata tumhari ids kitni hai main kitny pages generate karo 1, 2, 10, 100 ya 1 million is Waja sy yeh getStaticPaths ka error show karta hai k app ek function bano getStaticPaths ky name sy or waha ja kar define karo kitny pages generate karny hain
 
 export async function getStaticProps(context) {
   const { params } = context;
